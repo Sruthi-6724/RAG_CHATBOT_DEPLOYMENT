@@ -9,6 +9,6 @@ COPY streamlit_app_tfidf.py
 COPY main.py
 
 COPY data/. /data/
-
-CMD ["streamlit","run","streamlit_app_tfidf","--server.port = 10000"]
+EXPOSE 10000
+CMD ["streamlit","run","streamlit_app_tfidf.py","--server.port = 10000","--server.address=0.0.0.0"]
 
